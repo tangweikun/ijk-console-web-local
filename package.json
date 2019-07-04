@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "test": "ava"
+    "test": "ava",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-plugin-react-require": "2.x.x",
@@ -16,7 +18,8 @@
     "react": "^15.3.0",
     "react-addons-pure-render-mixin": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-router": "^2.6.0"
+    "react-router": "^2.6.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "ava": "^0.16.0",
@@ -41,5 +44,6 @@
     "sinon": "1.17.x",
     "style-loader": "^0.13.1",
     "webpack-hot-middleware": "^2.10.0"
-  }
+  },
+  "snyk": true
 }
